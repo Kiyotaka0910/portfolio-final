@@ -15,10 +15,10 @@
                 <span class="logo-icon">&gt;_</span> Noa<span class="logo-dot">.</span>Delpech
             </a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
                 <li><a href="stage-1.html"><i class="fa-solid fa-briefcase"></i> Stage 1</a></li>
                 <li><a href="stage-2.html"><i class="fa-solid fa-hourglass-half"></i> Stage 2</a></li>
-                <li><a href="veille-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Veille Cyber</a></li>
+                <li><a href="veille-cybersecurite.html" class="active"><i class="fa-solid fa-shield-halved"></i> Veille Cyber</a></li>
                 <li><a href="veille-ia.html"><i class="fa-solid fa-robot"></i> Veille IA</a></li>
                 <li><a href="guide-bonne-conduite.html"><i class="fa-solid fa-scale-balanced"></i> Guide</a></li>
                 <li><a href="tableau-de-synthese.html"><i class="fa-solid fa-chart-pie"></i> Synthèse</a></li>
@@ -39,11 +39,11 @@
         <section class="stats-panel-grid">
             <div class="stat-card border-red">
                 <span class="stat-title">Incidents Indexés</span>
-                <span class="stat-value">16</span>
+                <span class="stat-value" id="total-incidents">0</span>
             </div>
             <div class="stat-card border-blue">
                 <span class="stat-title">Source Majeure</span>
-                <span class="stat-value text-blue">InCyber</span>
+                <span class="stat-value text-blue">Feedly / InCyber</span>
             </div>
             <div class="stat-card border-green">
                 <span class="stat-title">Niveau de Menace</span>
@@ -53,318 +53,18 @@
 
         <h2 class="hub-title"><i class="fa-solid fa-shield-halved"></i> Threat Intelligence : Flux Chronologique (2026)</h2>
 
-        <div class="timeline-feed">
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-law">Fuite de Données / État</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Le ministère des Sports victime d’une fuite de données de « Mon compte Asso »</h3>
-                            <p class="summary-text">Le site French Breaches a révélé qu’une fuite de données affectait le service de demande de subvention. Un pirate informatique a dérobé une partie des informations saisies par les associations concernées avant de les mettre en vente sur un forum cybercriminel.</p>
-                            <a href="https://incyber.org/article/ministere-sports-victime-fuite-donnees-mon-compte-asso/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article1-cyber.jpeg" alt="Illustration Article 1">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-gov">Sensibilisation / PME</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Cybermalveillance.gouv.fr lance la MalletteCyber Pro à destination des TPE-PME</h3>
-                            <p class="summary-text">La plateforme nationale d’assistance cyber annonce un nouvel outil de sensibilisation gratuit à destination des petites et moyennes entreprises, présenté officiellement à l’occasion de la Grande Assemblée des Entrepreneurs.</p>
-                            <a href="https://incyber.org/article/cybermalveillance-gouv-fr-lance-la-mallettecyber-pro-a-destination-des-tpe-pme/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article2-cyber.jpeg" alt="Illustration Article 2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-tech">Opération Internationale</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Opération Endgame : Europol coordonne le démantèlement d’Amadey et de StealC</h3>
-                            <p class="summary-text">Europol a coordonné le démantèlement des infrastructures de trois logiciels malveillants : Amadey, StealC et SocGholish. Les autorités de six pays ont déconnecté 326 serveurs, 142 domaines et saisi 27 millions d’identifiants volés.</p>
-                            <a href="https://incyber.org/article/operation-endgame-europol-coordonne-demantelement-amadey-stealc/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article3-cyber.jpg" alt="Illustration Article 3">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-eco">Rançongiciel / Industrie</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Bajaj Auto, géant indien de l’automobile, victime d’une attaque par rançongiciel</h3>
-                            <p class="summary-text">Le constructeur automobile indien a été touché par un rançongiciel affectant ses activités et celles de sa filiale technologique. Cet événement met en lumière la vulnérabilité des systèmes industriels et des chaînes logistiques globales.</p>
-                            <a href="https://incyber.org/article/bajaj-auto-geant-indien-automobile-victime-attaque-par-rancongiciel/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article4-cyber.jpg" alt="Illustration Article 4">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-gov">Cyber-Guerre / Infrastructures</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Ukraine : une cyberattaque pro-russe perturbe l’application de l’opérateur postal public</h3>
-                            <p class="summary-text">L’opérateur public ukrainien Ukrposhta a subi de lourdes perturbations applicatives suite à une cyberattaque ennemie ciblée. Les équipes spécialisées ont été mobilisées en urgence pour rétablir les services critiques de distribution.</p>
-                            <a href="https://incyber.org/article/ukraine-cyberattaque-pro-russe-perturbe-application-operateur-postal-public/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article5-cyber.jpg" alt="Illustration Article 5">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-law">Justice / Cybercriminalité</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Deux membres de Scattered Spider plaident coupables du piratage de Transport for London</h3>
-                            <p class="summary-text">Deux cybercriminels du groupe anglophone ont reconnu leur responsabilité dans l'attaque majeure contre l'autorité des transports londonienne. L'incident a paralysé les services pendant des mois, exposant les données usagers et coûtant 34 millions d’euros.</p>
-                            <a href="https://incyber.org/article/deux-membres-scattered-spider-plaident-coupables-piratage-transport-for-london/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article6-cyber.webp" alt="Illustration Article 6">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-law">Santé / Données Sensibles</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>MesVaccins.net victime d’une fuite de données</h3>
-                            <p class="summary-text">L'éditeur Syadem a confirmé l'exfiltration de données personnelles médicales par un tiers non autorisé. La plateforme gère le carnet de vaccination numérique (CVN) des particuliers et des professionnels de santé.</p>
-                            <a href="https://incyber.org/article/mesvaccins-net-victime-fuite-donnees/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article7-cyber.webp" alt="Illustration Article 7">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-law">Fuite de Données / Institution</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Fuite de données à la Fédération sportive de la police nationale : 224 000 personnes concernées</h3>
-                            <p class="summary-text">La FSPN a déposé plainte suite à une cyberattaque d'envergure. Les données compromises touchent potentiellement plusieurs années d'historique de licences professionnelles de l'institution.</p>
-                            <a href="https://incyber.org/article/fuite-donnees-federation-sportive-de-la-police-nationale-224-000-personnes-concernees/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article8-cyber.jpg" alt="Illustration Article 8">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-tech">Juridique / Réseaux Sociaux</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Abonnements payants sur les réseaux sociaux : identifier les auteurs de contenus illicites</h3>
-                            <p class="summary-text">Pour contrer le pseudonymat et l'anonymat protégeant les auteurs de harcèlement ou diffamation, les données bancaires et d'identifications liées aux nouveaux abonnements payants deviennent un levier d'enquête majeur pour la justice.</p>
-                            <a href="https://incyber.org/article/abonnements-payants-sur-les-reseaux-sociaux-une-nouvelle-arme-pour-identifier-les-auteurs-de-contenus-illicites/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article9-cyber.jpg" alt="Illustration Article 9">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-tech">Démantèlement / Infrastructure</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Démantèlement du botnet SocGholish, pilier de l’écosystème cybercriminel russe</h3>
-                            <p class="summary-text">Une coalition policière internationale (Pays-Bas, USA, Allemagne, Canada) a neutralisé des composants vitaux de SocGholish, une infrastructure majeure infectant les serveurs d'entreprises mondiales pour le compte d'acteurs russes.</p>
-                            <a href="https://incyber.org/article/demantelement-botnet-socgholish-pilier-ecosysteme-cybercriminel-russe/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article10-cyber.webp" alt="Illustration Article 10">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-eco">Télécoms / Vie Privée</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Utiq, le mouchard ultime, monte en puissance</h3>
-                            <p class="summary-text">Parallèlement aux enjeux de traçabilité d'Utiq, le secteur français des télécoms tremble avec l'accord de rachat et de démantèlement de SFR à l'horizon 2027 par Bouygues, Free et Orange, soulevant des questions d'infrastructures massives.</p>
-                            <a href="https://incyber.org/article/utiq-mouchard-ultime-monte-puissance/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article11-cyber.jpg" alt="Illustration Article 11">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-gov">Géopolitique / Europe</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>L’Ukraine rejoint la réserve de cybersécurité de l’Union européenne</h3>
-                            <p class="summary-text">L'Union européenne a acté l'intégration de l'Ukraine au sein de son mécanisme de réponse collective coordonné par l'ENISA, ouvrant ce bouclier défensif aux partenaires extérieurs du programme Europe Numérique.</p>
-                            <a href="https://incyber.org/article/lukraine-rejoint-reserve-de-cybersecurite-union-europeenne/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Aerticle12-cyber.jpg" alt="Illustration Article 12">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-law">Justice / Fuites de données</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>France : Searcher, le moteur indexant des données personnelles volées, visé par la justice</h3>
-                            <p class="summary-text">Le site Searcher, qui agrégeait de manière illégale plus de 1,2 milliard de données compromises (notamment issues de l'ANTS et de l'Assurance Maladie), ferme son accès gratuit sous la pression judiciaire française.</p>
-                            <a href="https://incyber.org/article/france-searcher-moteur-indexant-donnees-personnelles-volees-vise-par-justice/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article13-cyber.jpg" alt="Illustration Article 13">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-gov">Espionnage / Menace Étatique</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Le secteur technologique, cible privilégiée des cybercriminels affiliés à la Chine</h3>
-                            <p class="summary-text">Le rapport annuel de CrowdStrike démontre que l'écosystème technologique mondial subit une pression d'espionnage massive, 58 % des intrusions étatiques identifiées provenant d'acteurs rattachés à Pékin.</p>
-                            <a href="https://incyber.org/article/secteur-technologique-cible-privilegiee-cybercriminels-affilies-chine/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article14-cyber.jpg" alt="Illustration Article 14">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-eco">Santé / Résilience d'Infrastructures</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>Almerys : une nouvelle cyberattaque qui interroge la résilience du tiers payant</h3>
-                            <p class="summary-text">L'opérateur Almerys a confirmé la compromission de sa plateforme d'attribution des prises en charge. L'attaque a forcé les mutuelles majeures (Alan, AG2R) à alerter en urgence leurs assurés sur les risques de défaillance systémique.</p>
-                            <a href="https://incyber.org/article/almerys-une-nouvelle-cyberattaque-qui-interroge-la-resilience-du-tiers-payant/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article15-cyber.jpeg" alt="Illustration Article 15">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="axis-tag tag-law">Fuite de Données / RH</span>
-                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> InCyber</span>
-                </div>
-                <div class="timeline-card">
-                    <div class="card-split">
-                        <div class="card-content">
-                            <h3>RATP : une fuite de données pourrait concerner plus de 62 000 employés</h3>
-                            <p class="summary-text">Mise en vente sur le Dark Web d'un fichier sensible contenant les structures organisationnelles, e-mails, identifiants internes et fiches de postes de plus de 62 000 collaborateurs de la régie des transports parisiens.</p>
-                            <a href="https://incyber.org/article/ratp-une-fuite-de-donnees-pourrait-concerner-plus-de-62-000-employes/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
-                        </div>
-                        <div class="card-img-zone">
-                            <img src="images/Article16-cyber.jpg" alt="Illustration Article 16">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Conteneur dynamique alimenté depuis Feedly -->
+        <div class="timeline-feed" id="cyber-feed">
+            <p style="text-align: center; color: #888;">Chargement des articles de la veille...</p>
         </div>
+
     </main>
 
     <footer class="cyber-footer">
         <p>&copy; 2026 Noa Delpech. Section Cyber-Veille BTS SIO SISR.</p>
     </footer>
 
+    <!-- Script de chargement dynamique -->
+    <script src="js/cyber.js"></script>
 </body>
 </html>
