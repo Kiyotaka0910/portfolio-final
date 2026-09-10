@@ -1,53 +1,57 @@
 import json
-import os
+import re
 import feedparser
 
-# Remplace les URLs ci-dessous par les liens RSS de tes dossiers/tableaux Feedly
-FEEDS = {
-    "cybersecurity": "https://incyber.org/feed/", # Ex: Flux RSS InCyber ou ton flux Feedly
-    "ia": "https://sante.Incyber.org/feed/"         # Remplace par ton flux RSS IA Feedly
+# 1. LISTE DES SOURCES DE TON DOSSIER FEEDLY "cybersecurite"
+SOURCES_CYBER = [
+    "https://incyber.org/feed/",           # Source : INCYBER NEWS
+    "https://www.cert.ssi.gouv.fr/feed/"   # Source : CERT-FR
+    # Si tu t'abonnes à d'autres sources sur Feedly, tu pourras ajouter leurs liens ici
+]
+
+def clean_html(text):
+    if not text:
+        return ""
+    clean = re.sub('<[^<]+?>', '', text)
+    return clean[:250] + "..." if len(clean) > 250 else clean
+
+FALLBACK_IMAGE = "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80"
+
+cyber_articles = []
+
+print("Récupération automatique des articles Feedly...")
+
+for url in SOURCES_CYBER:
+    feed = feedparser.parse(url)
+    
+    # On prend les 8 derniers articles de chaque source
+    for entry in feed.entries[:8]:
+        image_url = FALLBACK_IMAGE
+        if hasattr(entry, 'media_content') and entry.media_content:
+            image_url = entry.media_content[0].get('url', FALLBACK_IMAGE)
+        elif hasattr(entry, 'enclosures') and entry.enclosures:
+            image_url = entry.enclosures[0].get('href', FALLBACK_IMAGE)
+
+        summary_raw = getattr(entry, 'summary', getattr(entry, 'description', ''))
+
+        article = {
+            "title": entry.title,
+            "link": entry.link,
+            "summary": clean_html(summary_raw),
+            "tag": "Threat Intelligence",
+            "tag_class": "tag-law",
+            "source": feed.feed.get("title", "Feedly Source"),
+            "image": image_url
+        }
+        cyber_articles.append(article)
+
+# On enregistre tout directement dans articles.json
+data = {
+    "cybersecurity": cyber_articles,
+    "ia": []
 }
 
-JSON_FILE = "articles.json"
-
-# 1. Charger les articles existants
-if os.path.exists(JSON_FILE):
-    with open(JSON_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
-else:
-    data = {"cybersecurity": [], "ia": []}
-
-# 2. Parcourir chaque catégorie et ajouter au maximum 2 nouveaux articles
-for category, rss_url in FEEDS.items():
-    parsed_feed = feedparser.parse(rss_url)
-    existing_links = {art["link"] for art in data.get(category, [])}
-    
-    added_count = 0
-    for entry in parsed_feed.entries:
-        if added_count >= 2:
-            break
-            
-        if entry.link not in existing_links:
-            # Récupérer l'image si disponible
-            image_url = "images/default-cyber.jpg"
-            if "media_content" in entry and len(entry.media_content) > 0:
-                image_url = entry.media_content[0].get("url", image_url)
-                
-            new_article = {
-                "title": entry.title,
-                "link": entry.link,
-                "summary": getattr(entry, "summary", getattr(entry, "description", ""))[:250] + "...",
-                "tag": "Mise à jour mensuelle",
-                "tag_class": "tag-law",
-                "source": "Feedly",
-                "image": image_url
-            }
-            # Insérer en haut de liste
-            data[category].insert(0, new_article)
-            added_count += 1
-
-# 3. Enregistrer les modifications dans le fichier JSON
-with open(JSON_FILE, "w", encoding="utf-8") as f:
+with open("articles.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("Synchronisation mensuelle terminée !")
+print(f"Succès ! {len(cyber_articles)} articles récupérés depuis tes sources Feedly.")
