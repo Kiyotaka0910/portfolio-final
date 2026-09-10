@@ -1585,3 +1585,56 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+/* --- REGLES D'AFFICHAGE DES CARTES ET IMAGES VEILLE --- */
+.article-card {
+    display: flex;
+    flex-direction: row;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.article-card:hover {
+    border-color: #00f2fe;
+    transform: translateY(-3px);
+}
+
+.card-body {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-image-wrapper {
+    width: 220px;
+    min-width: 220px;
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Adaptation pour écrans mobiles */
+@media (max-width: 768px) {
+    .article-card {
+        flex-direction: column-reverse;
+    }
+    .card-image-wrapper {
+        width: 100%;
+        min-width: 100%;
+        height: 180px;
+    }
+}
