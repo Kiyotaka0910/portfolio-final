@@ -1,61 +1,63 @@
 import json
 import re
 import feedparser
+from urllib.parse import urljoin
 
-# 1. LISTE DES SOURCES DE TON DOSSIER FEEDLY
 SOURCES_CYBER = [
-    "https://incyber.org/feed/",           # Source : INCYBER NEWS
-    "https://www.cert.ssi.gouv.fr/feed/"   # Source : CERT-FR
+    "https://incyber.org/feed/",
+    "https://www.cert.ssi.gouv.fr/feed/"
 ]
 
+FALLBACK_CYBER = "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80"
+FALLBACK_CERT = "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
+
 def clean_html(text):
-    """Enlève les balises HTML pour garder un résumé propre"""
     if not text:
         return ""
     clean = re.sub('<[^<]+?>', '', text)
     return clean[:250].strip() + "..." if len(clean) > 250 else clean.strip()
 
-def find_image(entry):
-    """Cherche l'image dans les balises RSS ou directement dans le texte HTML"""
-    # Recherche 1 : Balises RSS officielles
+def extract_image(entry, base_url):
+    # 1. Media content RSS
     if hasattr(entry, 'media_content') and entry.media_content:
-        url = entry.media_content[0].get('url')
-        if url: return url
+        for media in entry.media_content:
+            url = media.get('url')
+            if url and not url.endswith(('.gif', '.ico')):
+                return urljoin(base_url, url)
+    
+    # 2. Enclosures RSS
     if hasattr(entry, 'enclosures') and entry.enclosures:
-        url = entry.enclosures[0].get('href')
-        if url: return url
+        for enc in entry.enclosures:
+            url = enc.get('href')
+            if url and any(ext in url.lower() for ext in ['.jpg', '.jpeg', '.png', '.webp']):
+                return urljoin(base_url, url)
 
-    # Recherche 2 : Extraction de la balise <img src="..."> dans le texte
-    full_text = ""
+    # 3. Extraction dans le texte HTML
+    content = ""
     if hasattr(entry, 'content'):
         for c in entry.content:
-            full_text += c.get('value', '')
-    full_text += getattr(entry, 'summary', '') + getattr(entry, 'description', '')
+            content += c.get('value', '')
+    content += getattr(entry, 'summary', '') + getattr(entry, 'description', '')
 
-    match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', full_text, re.IGNORECASE)
+    match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
     if match:
-        return match.group(1)
+        img_url = match.group(1)
+        if not any(bad in img_url.lower() for bad in ['pixel', 'avatar', 'logo', '1x1', '.gif', 'feeds.feedburner']):
+            return urljoin(base_url, img_url)
 
     return None
 
-# Images par défaut si la source n'en fournit pas
-FALLBACK_IMAGES = {
-    "CERT": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80",
-    "DEFAULT": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80"
-}
-
 cyber_articles = []
-print("Récupération intelligente des articles et des visuels...")
 
 for url in SOURCES_CYBER:
     feed = feedparser.parse(url)
-    source_title = feed.feed.get("title", "Source Veille")
+    source_title = feed.feed.get("title", "Source Cyber")
 
     for entry in feed.entries[:8]:
-        # Récupération ou attribution d'une image
-        image_url = find_image(entry)
-        if not image_url:
-            image_url = FALLBACK_IMAGES["CERT"] if "CERT" in source_title.upper() or "CERT" in url.upper() else FALLBACK_IMAGES["DEFAULT"]
+        img_url = extract_image(entry, url)
+        
+        if not img_url:
+            img_url = FALLBACK_CERT if "CERT" in source_title.upper() or "CERT" in url.upper() else FALLBACK_CYBER
 
         summary_raw = getattr(entry, 'summary', getattr(entry, 'description', ''))
 
@@ -66,11 +68,10 @@ for url in SOURCES_CYBER:
             "tag": "Threat Intelligence",
             "tag_class": "tag-law",
             "source": source_title,
-            "image": image_url
+            "image": img_url
         }
         cyber_articles.append(article)
 
-# Sauvegarde dans articles.json
 data = {
     "cybersecurity": cyber_articles,
     "ia": []
@@ -79,4 +80,4 @@ data = {
 with open("articles.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"Succès ! {len(cyber_articles)} articles mis à jour avec leurs visuels.")
+print(f"Succès ! {len(cyber_articles)} articles générés.")
