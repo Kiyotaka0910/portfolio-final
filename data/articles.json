@@ -1,4 +1,23 @@
 {
-  "ia": [],
+  "ia": [
+    {
+      "id": "336b0fb522d2d9cf",
+      "title": "Microsoft : un groupe aligné sur Pékin a détourné des applications ConnectWise avec des agents d'IA",
+      "url": "https://www.actuia.com/actualite/microsoft-un-groupe-aligne-sur-pekin-a-detourne-des-applications-connectwise-avec-des-agents-dia",
+      "source": "ActuIA",
+      "published": "2026-10-22T13:46:00+00:00",
+      "summary": "Microsoft attribue à Storm-0940, un groupe qu'il dit aligné sur l'État chinois, la compromission de ConnectWise Cloud Backup et affirme que l'outil open source ARTEX, piloté par des agents d'IA, a accéléré l'exploitation d'applications ConnectWise autorisées dans des tenants Microsoft 365. Plus de 2 250 tenants ont été visés, sans nombre de compromissions publié, et Microsoft demande aux administrateurs de conserver les preuves avant toute suppression.",
+      "image": "https://www.actuia.com/storage/uploads/generated/11503-yhcbcuxj-1200.jpg"
+    },
+    {
+      "id": "4768e88aafd4b30c",
+      "title": "Clause LLM de la GSA : ce qu'elle impose aux éditeurs européens",
+      "url": "https://www.actuia.com/actualite/clause-llm-de-la-gsa-ce-quelle-impose-aux-editeurs-europeens",
+      "source": "ActuIA",
+      "published": "2026-10-22T13:16:00+00:00",
+      "summary": "La GSA, centrale d'achat fédérale américaine, devait insérer au plus tard le 19 octobre 2026 la clause 552.239-7001 dans ses nouveaux appels d'offres de LLM, de chatbots et d'agents : pas d'entraînement sur les données de l'État, effacement des poids affinés et des embeddings en fin de contrat, alertes sous 72 heures. Un éditeur européen reste admis, mais doit annoncer 30 jours à l'avance toute adaptation de son modèle à des règles non américaines qui change substantiellement ses réponses, ce qu",
+      "image": "https://www.actuia.com/storage/uploads/generated/11483-iufobqgn-1200.jpg"
+    }
+  ],
   "cybersecurite": []
 }
