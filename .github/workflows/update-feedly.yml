@@ -1,0 +1,40 @@
+name: Mettre à jour les articles de veille
+
+on:
+  schedule:
+    # Le 5 de chaque mois à 07:00 UTC (l'heure locale varie avec l'heure d'été).
+    - cron: "0 7 5 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-articles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Récupérer les nouveaux articles RSS
+        run: python scripts/update_articles.py
+
+      - name: Enregistrer les nouveaux articles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/articles.json
+          if git diff --cached --quiet; then
+            echo "Aucun nouvel article à ajouter."
+          else
+            git commit -m "Veille : ajout de nouveaux articles RSS"
+            git push
+          fi

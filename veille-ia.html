@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique IA — Noa DELPECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">&gt;_</span> Noa<span class="logo-dot">.</span>Delpech
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="stage-1.html"><i class="fa-solid fa-briefcase"></i> Stage 1</a></li>
+                <li><a href="stage-2.html"><i class="fa-solid fa-hourglass-half"></i> Stage 2</a></li>
+                <li><a href="veille-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Veille Cyber</a></li>
+                <li><a href="veille-ia.html"><i class="fa-solid fa-robot"></i> Veille IA</a></li>
+                <li><a href="guide-bonne-conduite.html"><i class="fa-solid fa-scale-balanced"></i> Guide</a></li>
+                <li><a href="tableau-de-synthese.html"><i class="fa-solid fa-chart-pie"></i> Synthèse</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="cyber-header-hub">
+        <div class="hub-overlay">
+            <span class="badge-status-cyber"><i class="fa-solid fa-circle-dot pulse"></i> VEILLE ACTIVÉE</span>
+            <h1><i class="fa-solid fa-microchip"></i> Intelligence Artificielle</h1>
+            <p>Analyse des ruptures technologiques, encadrements juridiques et déploiements d'infrastructures IA.</p>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="stats-panel-grid">
+            <div class="stat-card">
+                <span class="stat-title">Articles Indexés</span>
+                <span class="stat-value">26</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-title">Sources Majeures</span>
+                <span class="stat-value text-blue">Le Monde</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-title">Outil de Centralisation</span>
+                <span class="stat-value text-purple">GitHub</span>
+            </div>
+        </section>
+
+        <h2 class="hub-title"><i class="fa-solid fa-timeline"></i> Flux Chronologique d'Analyse (2026)</h2>
+
+        <div class="timeline-feed">
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-eco">Économie / Infra</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Plan colossal d’investissements en Corée du Sud (1 000 Mds €)</h3>
+                            <p class="summary-text">Étalé sur dix ans, ce plan prévoit de construire des usines de semi-conducteurs avancés et des data-centers pour l’intelligence artificielle. Il relance le débat sur la manière dont les profits générés par le secteur devraient être redistribués.</p>
+                            <a href="https://www.lemonde.fr/economie/article/2026/06/29/ia-la-coree-du-sud-annonce-un-plan-colossal-d-investissements-equivalant-a-plus-de-1-000-milliards-d-euros_6716885_3234.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article1-IA.avif" alt="Illustration Article 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-law">Juridique / CSE</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>La justice française suspend l’usage de ChatGPT dans une entreprise</h3>
+                            <p class="summary-text">La Cour d'appel de Paris a confirmé la suspension de l'utilisation de ChatGPT et d'un assistant rédactionnel interne dans des sociétés de presse, au motif d'une absence d'information‑consultation préalable du CSE. Rappel sur le droit du travail.</p>
+                            <a href="https://www.actuia.com/actualite/la-justice-francaise-suspend-lusage-de-chatgpt-dans-une-entreprise-un-signal-fort-pour-tous-les-projets-ia/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article2-IA.jpg" alt="Illustration Article 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">Technique / LLM</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Siri AI : Gemini comme professeur, pas comme moteur</h3>
+                            <p class="summary-text">L'accord technique indique que Google fournirait Gemini comme « professeur » via distillation à l'entraînement, tandis que l'inférence s'exécuterait dans le cloud. Ce découpage nuance le récit médiatique traditionnel.</p>
+                            <a href="https://www.actuia.com/actualite/siri-ai-gemini-comme-professeur-pas-comme-moteur-ce-que-la-wwdc-na-pas-dit/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article3-IA.jpg" alt="Illustration Article 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">Recherche / Risque</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Essai randomisé sur le coût d'apprentissage avec GPT-5</h3>
+                            <p class="summary-text">Des essais menés par Carnegie Mellon, Oxford et le MIT montrent que s'entraîner avec GPT-5 réduit la performance une fois l'assistant retiré (57 % de réussite vs 73 %). Cela met en évidence la dépendance des utilisateurs.</p>
+                            <a href="https://www.actuia.com/actualite/aides-par-gpt-5-puis-livres-a-eux-memes-un-essai-randomise-mesure-le-cout-dapprentissage-de-lassistance-ia/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article4-IA.jpg" alt="Illustration Article 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-gov">Éducation / Stratégie</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Les universités chinoises bouleversent leurs cursus pour l'IA</h3>
+                            <p class="summary-text">Une refonte universitaire est en cours à travers le pays pour coller aux priorités économiques du gouvernement chinois. Certaines spécialités comme les langues vivantes doivent s’adosser aux sciences dures.</p>
+                            <a href="https://www.lemonde.fr/international/article/2026/06/26/a-l-ere-de-l-ia-les-universites-chinoises-bouleversent-leurs-cursus_6715795_3210.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article5-IA.avif" alt="Illustration Article 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-eco">Société / Emploi</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Silicon Valley : Le blues et l'angoisse de la génération IA</h3>
+                            <p class="summary-text">En Californie, la montée en puissance de l’IA ne suscite plus l’enthousiasme unanime. L’angoisse monte alors que se multiplient les suppressions d’emplois et qu'apparaissent des risques pour la démocratie.</p>
+                            <a href="https://www.lemonde.fr/m-le-mag/article/2026/06/26/licenciements-perte-de-sens-risques-pour-la-democratie-dans-la-silicon-valley-le-blues-de-la-generation-ia_6715756_4500055.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article6-IA.avif" alt="Illustration Article 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-gov">Géopolitique</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Pékin gère son écosystème d’innovation comme une plateforme</h3>
+                            <p class="summary-text">Face à la course mondiale pour la souveraineté technologique, les États-Unis semblent négliger les nouvelles stratégies déployées par la Chine pour administrer globalement son réseau d'innovation numérique.</p>
+                            <a href="https://www.lemonde.fr/idees/article/2026/06/24/ia-pekin-gere-desormais-son-immense-ecosysteme-d-innovation-a-la-maniere-d-une-grande-plateforme-numerique_6712066_3232.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article7-IA.avif" alt="Illustration Article 7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-eco">Marché / Bourse</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Google se fait braconner ses talents par OpenAI et Anthropic</h3>
+                            <p class="summary-text">La maison mère d’Alphabet dévisse en Bourse, alors que les surinvestissements se poursuivent et qu’une guerre des prix féroce dans l’IA, menée en partie avec l'aide de modèles chinois, menace les leaders.</p>
+                            <a href="https://www.lemonde.fr/international/article/2026/06/23/google-se-fait-braconner-ses-talents-dans-l-intelligence-artificielle-par-openai-et-anthropic_6708550_3210.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article8-IA.avif" alt="Illustration Article 8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-law">Cyber / Sécurité</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Puissance de l’IA en cybersécurité : Enthousiasme et craintes</h3>
+                            <p class="summary-text">Même si Mythos, le dernier modèle d’Anthropic, s’avère très puissant pour détecter les vulnérabilités dans le code, de nombreux experts y voient un moyen d'automatiser les corrections défensives à grande échelle.</p>
+                            <a href="https://www.lemonde.fr/pixels/article/2026/06/20/comment-l-essor-inedit-des-competences-de-l-ia-inquiete-autant-qu-il-enthousiasme-le-monde-de-la-cybersecurite_6705262_4408996.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article9-IA.avif" alt="Illustration Article 9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-gov">Politique / France</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Présidentielle 2027 : Edouard Philippe veut investir massivement</h3>
+                            <p class="summary-text">À VivaTech, il a formulé des propositions visant à accélérer la création d’un marché des capitaux européens et faire de la commande publique un levier de financement structurel pour l'écosystème IA.</p>
+                            <a href="https://www.lemonde.fr/politique/article/2026/06/18/presidentielle-2027-a-vivatech-edouard-philippe-affirme-sa-volonte-d-investir-massivement-dans-l-ia_6704502_823448.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article10-IA.avif" alt="Illustration Article 10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-law">Dérégulation</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Argentine : Javier Milei imagine des entreprises dirigées par l'IA</h3>
+                            <p class="summary-text">Dans une tribune, le président libertarien détaille son projet visant à « libérer l’intelligence artificielle », axé sur une fiscalité ultra-limitée et la promesse absolue de ne pas réguler cette technologie.</p>
+                            <a href="https://www.lemonde.fr/economie/article/2026/06/17/des-entreprises-non-humaines-dirigees-par-l-intelligence-artificielle-la-trouvaille-de-javier-milei-pour-faire-de-l-argentine-un-paradis-de-l-ia_6704244_3234.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article11-IA.avif" alt="Illustration Article 11">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">Science / Recherche</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Déclaration de Leyde : L'appel des mathématiciens pour l'IA</h3>
+                            <p class="summary-text">La déclaration, signée par plus de 2 300 professionnels, rappelle les valeurs de leur discipline et identifie cinq menaces majeures, notamment sur l’autonomie de la recherche et les processus d'évaluation.</p>
+                            <a href="https://www.lemonde.fr/sciences/article/2026/06/17/des-mathematiciens-lancent-un-appel-pour-reprendre-la-main-sur-l-ia_6704159_1650684.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article12-IA.avif" alt="Illustration Article 12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-gov">Militaire / Défense</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Grok, l’IA d’Elon Musk, a servi dans les frappes du Pentagone</h3>
+                            <p class="summary-text">Un modèle dérivé, nommé Grok Gov Model, est activement utilisé dans un programme de ciblage tactique assisté par intelligence artificielle de l’armée américaine, d'après le ministère de la Défense.</p>
+                            <a href="https://www.lemonde.fr/international/article/2026/06/17/grok-l-ia-d-elon-musk-a-servi-dans-les-frappes-en-iran-revele-le-pentagone_6704083_3210.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article13-IA.avif" alt="Illustration Article 13">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-eco">Culture / Studio</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>« Toy Story 5 » : Pixar s’endort face à la révolution IA</h3>
+                            <p class="summary-text">Alors que l’intelligence artificielle galope à vitesse exponentielle dans le domaine de la génération vidéo, le studio Pixar, autrefois pionnier de l'animation, semble accuser un retard stratégique.</p>
+                            <a href="https://www.lemonde.fr/culture/article/2026/06/16/toy-story-5-quand-pixar-s-endort_6703888_3246.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article14-IA.avif" alt="Illustration Article 14">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-gov">Infrastructure / Énergie</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Canada : L'IA devient un champ de bataille politique local</h3>
+                            <p class="summary-text">Le gouvernement Carney veut bâtir une « IA canadienne souveraine » via de nouveaux centres de données basés sur les hydrocarbures de l’Alberta. Le projet se heurte à de fortes oppositions locales écologiques.</p>
+                            <a href="https://www.lemonde.fr/culture/article/2026/06/16/toy-story-5-quand-pixar-s-endort_6703888_3246.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article15-IA.avif" alt="Illustration Article 15">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">Logiciel / Dev</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> Le Monde</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>SpaceX rachète Cursor (éditeur de code IA) pour 60 Mds $</h3>
+                            <p class="summary-text">Le rachat massif de la société intervient alors qu’une course féroce est engagée dans la Silicon Valley pour capter les éditeurs d'outils de code assisté, devenus le moteur de productivité de l'industrie.</p>
+                            <a href="https://www.lemonde.fr/economie/article/2026/06/16/spacex-rachete-cursor-editeur-de-logiciel-de-code-assiste-par-ia-valorise-a-60-milliards-de-dollars_6703540_3234.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/Article16-IA.avif" alt="Illustration Article 16">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA / Wikipedia</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Wikipédia en français interdit l’usage de l’IA générative pour rédiger des articles</h3>
+                            <p class="summary-text">Jusqu’ici, l’usage de l’intelligence artificielle générative était « vivement déconseillé » sur Wikipédia en français pour l’écriture d’articles. Elle emboîte désormais le pas à Wikipédia en anglais, qui l’interdit depuis mars.</p>
+                            <a href="https://www.lemonde.fr/pixels/article/2026/09/14/wikipedia-en-francais-interdit-l-usage-de-l-ia-generative-pour-rediger-des-articles_6773851_4408996.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/article17-ia.avif" alt="Illustration Article 17">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>L’ONU presse les États d’encadrer l’IA pour protéger les droits humains, face à des « risques sans précédent </h3>
+                            <p class="summary-text">Alors que l’IA s’impose dans tous les secteurs, des patrons américains du secteur technologique ont eux-mêmes plaidé pour Un ralentissement des avancées dans le domaine.</p>
+                            <a href="https://www.lemonde.fr/pixels/article/2026/09/14/l-onu-presse-les-etats-d-encadrer-l-intelligence-artificielle-pour-proteger-les-droits-humains-face-a-des-risques-sans-precedent_6773799_4408996.html" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/article18-ia.avif" alt="Illustration Article 18">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Le vrai défi de l’IA en entreprise n’est plus le modèle, mais son exploitation</h3>
+                            <p class="summary-text">En juin 2026, les principaux fournisseurs cloud (Google Cloud, AWS, Microsoft, Databricks) recentrent leurs annonces sur l’exploitation d’agents IA plutôt que sur la course aux modèles. Le basculement met le MLOps au centre de l’exploitation, avec quatre enjeux clés : contexte métier, gouvernance, observabilité et coût d’inférence, repositionnant le cloud comme système d’exploitation de l’IA.</p>
+                            <a href="https://www.actuia.com/actualite/le-vrai-defi-de-lia-en-entreprise-nest-plus-le-modele-mais-son-exploitation/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-19.jpg" alt="Illustration Article 19">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Pourquoi Godot ferme la porte au code généré par IA</h3>
+                            <p class="summary-text">Le 30 juin 2026, le moteur de jeu open source Godot a fortement restreint l’acceptation de code généré par IA dans ses contributions. Cette décision met en lumière les questions de qualité du code produit par IA et la surcharge des mainteneurs, un enjeu partagé par d’autres projets libres confrontés à un afflux similaire.</p>
+                            <a href="https://www.actuia.com/actualite/pourquoi-godot-ferme-la-porte-au-code-genere-par-ia/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-20.png" alt="Illustration Article 20">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Ce que Poppy, l’IA générative de la Californie, apprend à l’administration européenne</h3>
+                            <p class="summary-text">À compter du 1er juillet 2026, la Californie généralise Poppy, une plateforme d’IA générative conçue par et pour ses agents publics. La mise en œuvre met l’accent sur l’absence de fuite de données et l’indépendance vis-à-vis d’un fournisseur unique, un modèle opérationnel don’t les administrations française et européenne peuvent tirer des enseignements concrets..</p>
+                            <a href="https://www.actuia.com/actualite/ce-que-poppy-lia-generative-de-la-californie-apprend-a-ladministration-europeenne/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-21.png" alt="Illustration Article 21">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>GPT-6 Astra : ce qui a changé chez OpenAI en quinze jours</h3>
+                            <p class="summary-text">En septembre, OpenAI a présenté GPT-6 Astra aux entreprises avec des chiffres de sûreté et des contrôles d’administration absents du lancement initial. Entre les deux dates, un rapport d’incident et un wiki détourné ont conduit à une mise à jour des promesses de sûreté.</p>
+                            <a href="https://www.actuia.com/actualite/gpt-6-astra-ce-qui-a-change-chez-openai-en-quinze-jours/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-22.jpg" alt="Illustration Article 22">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Cloudflare facilite le refus de l’entraînement IA sans bloquer la recherche</h3>
+                            <p class="summary-text">Cloudflare a lancé Disallow AI Training le 15 septembre. Le réglage transmet les préférences d’entraînement et bloque certains robots, sans bloquer les robots mixtes admis pour la recherche. Bing nécessite encore NOARCHIVE. Refuser l’entraînement et sortir des réponses générées sont deux choix distincts..</p>
+                            <a href="https://www.actuia.com/actualite/cloudflare-facilite-le-refus-de-lentrainement-ia-sans-bloquer-la-recherche/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-23.png" alt="Illustration Article 23">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Commerce de biens : l’IA porte 47 % de la croissance en valeur</h3>
+                            <p class="summary-text">L’OMC relève à 3,9 % sa prévision de croissance du commerce mondial de marchandises pour 2026, portée par les biens liés à l’IA. Ces biens représentent 14,8 % des échanges mais 47 % de la croissance en valeur au premier semestre, avec une domination asiatique et une faible part européenne à l’export.</p>
+                            <a href="https://www.actuia.com/actualite/commerce-de-biens-lia-porte-47-de-la-croissance-en-valeur/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articeia-24.jpg" alt="Illustration Article 24">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Données personnelles : ce que l’ICO a obtenu des géants de l’IA</h3>
+                            <p class="summary-text">L’ICO a publié le bilan de sa supervision des modèles de fondation : dix développeurs ont modifié ou promis de modifier notices et analyses juridiques. Les données sensibles restent un point de blocage dans ces engagements.</p>
+                            <a href="https://www.actuia.com/actualite/donnees-personnelles-ce-que-lico-a-obtenu-des-geants-de-lia/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-25.jpg" alt="Illustration Article 25">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="axis-tag tag-tech">IA</span>
+                    <span class="source-text"><i class="fa-solid fa-newspaper"></i> ActuIA</span>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-split">
+                        <div class="card-content">
+                            <h3>Loi sur l’IA : obligations en vigueur et reports de l’omnibus 2026/1744</h3>
+                            <p class="summary-text">Au 6 octobre 2026, une entreprise française qui fournit ou utilise un système d’IA doit déjà respecter trois blocs du règlement (UE) 2024/1689. Les pratiques interdites et la maîtrise de l’IA s’appliq....</p>
+                            <a href="https://www.actuia.com/actualite/calendrier-ai-act-ce-qui-sapplique-ce-que-lomnibus-reporte/" target="_blank" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                        <div class="card-img-zone">
+                            <img src="images/articleia-26.jpg" alt="Illustration Article 26">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <p>&copy; 2026 Noa Delpech. Flux de Veille Technologique SIO SISR.</p>
+    </footer>
+
+<script src="./scripts/render_articles.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "ia": [
+    {
+      "name": "Le Monde — Intelligence artificielle",
+      "url": "https://www.lemonde.fr/intelligence-artificielle/rss_full.xml"
+    },
+    {
+      "name": "ActuIA",
+      "url": "https://www.actuia.com/feed/"
+    },
+    {
+      "name": "Intelligence Artificielle et Transhumanisme",
+      "url": "https://iatranshumanisme.com/feed/"
+    },
+    {
+      "name": "iA",
+      "url": "http://feeds.feedburner.com/InformationArchitectsJapan"
+    }
+  ],
+  "cybersecurite": [
+    {
+      "name": "InCyber News",
+      "url": "https://www.observatoire-fic.com/feed/"
+    },
+    {
+      "name": "CERT-FR",
+      "url": "https://www.cert.ssi.gouv.fr/site/cert-fr.rss"
+    }
+  ]
+}
