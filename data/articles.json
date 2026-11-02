@@ -1,6 +1,24 @@
 {
   "ia": [
     {
+      "id": "75308bdba1242df0",
+      "title": "Abou Dhabi teste OpenAI sur ses contrôles d'importations alimentaires",
+      "url": "https://www.actuia.com/actualite/abou-dhabi-teste-openai-sur-ses-controles-dimportations-alimentaires",
+      "source": "ActuIA",
+      "published": "2026-11-02T08:27:19+00:00",
+      "summary": "Abou Dhabi a signé quatre accords avec OpenAI, impliquant l'administration émirienne directement ainsi qu'ADNOC et Mubadala via Inception42 (G42). Un premier usage est déjà en production, portant sur l'aide au contrôle de conformité des importations alimentaires.",
+      "image": "https://www.actuia.com/storage/uploads/generated/11543-arlr9bn9-1200.jpg"
+    },
+    {
+      "id": "9c81dfe7977a9e77",
+      "title": "L’actualité IA, secteur par secteur : ActuIA ouvre sa revue sectorielle de l'intelligence artificielle",
+      "url": "https://www.actuia.com/actualite/lactualite-ia-du-mois-secteur-par-secteur-actuia-ouvre-sa-revue",
+      "source": "ActuIA",
+      "published": "2026-11-02T06:30:00+00:00",
+      "summary": "ActuIA met gratuitement à disposition de ses membres une revue d'actualité IA regroupant plus de 1 300 brèves des trente derniers jours, classées par secteur et reliées à leur source. Chaque secteur peut être suivi en un clic pour alimenter une veille personnalisée.",
+      "image": "https://www.actuia.com/storage/uploads/generated/11539-nrjqwhd1-1200.jpg"
+    },
+    {
       "id": "d954e0cdb70e6f03",
       "title": "Le Canada obtient un siège au conseil des supercalculateurs d'EuroHPC",
       "url": "https://www.actuia.com/actualite/le-canada-obtient-un-siege-au-conseil-des-supercalculateurs-deurohpc",
@@ -55,5 +73,24 @@
       "image": "https://www.actuia.com/storage/uploads/generated/11483-iufobqgn-1200.jpg"
     }
   ],
-  "cybersecurite": []
+  "cybersecurite": [
+    {
+      "id": "dd96f36af65d07c3",
+      "title": "Hameçonnage aux faux votes pour des concours sur WhatsApp",
+      "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/vigilance-faux-vote-whatsapp",
+      "source": "Cybermalveillance.gouv.fr",
+      "published": "2026-10-27T17:11:57+00:00",
+      "summary": "Vous avez reçu un message WhatsApp d’une connaissances vous incitant à voter pour un concours ? Il peut s’agir d’une arnaque. De quoi s’agit-il ? Nos conseils.",
+      "image": ""
+    },
+    {
+      "id": "17faaa8a75793e02",
+      "title": "Bulletin d'actualité CERTFR-2026-ACT-045 (26 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-045",
+      "source": "CERT-FR",
+      "published": "2026-10-26T00:00:00+00:00",
+      "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
+      "image": ""
+    }
+  ]
 }
