@@ -1,3 +1,4 @@
+
 (() => {
   "use strict";
 
@@ -8,32 +9,49 @@
       ? "cybersecurite"
       : null;
 
-  // Les anciennes images locales peuvent ne plus exister dans le dépôt de test.
-  document.querySelectorAll(".card-img-zone img").forEach((img) => {
-    img.addEventListener("error", () => {
-      const zone = img.closest(".card-img-zone");
-      if (zone) zone.remove();
-    }, { once: true });
-  });
-
   if (!category) return;
 
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
   })[char]);
+
+  function canonicalize(value) {
+    try {
+      const url = new URL(value, window.location.href);
+      url.hash = "";
+      ["fbclid", "gclid"].forEach((key) => url.searchParams.delete(key));
+      Array.from(url.searchParams.keys())
+        .filter((key) => key.toLowerCase().startsWith("utm_"))
+        .forEach((key) => url.searchParams.delete(key));
+      url.pathname = url.pathname.replace(/\/+$/, "") || "/";
+      return url.href;
+    } catch {
+      return "";
+    }
+  }
 
   fetch("./data/articles.json", { cache: "no-store" })
     .then((response) => {
-      if (!response.ok) throw new Error("Le fichier des articles n'est pas disponible.");
+      if (!response.ok) {
+        throw new Error("Le fichier des articles n'est pas disponible.");
+      }
       return response.json();
     })
     .then((data) => {
-      const feed = document.querySelector(".timeline-feed");
-      if (!feed) return;
+      const container = document.querySelector("#feedly-articles");
+      if (!container) {
+        console.warn("[Veille RSS] Emplacement Feedly introuvable.");
+        return;
+      }
 
       const articles = Array.isArray(data[category]) ? data[category] : [];
+
       const existingUrls = new Set(
-        Array.from(feed.querySelectorAll('.source-link-btn[href]'))
+        Array.from(document.querySelectorAll('.source-link-btn[href]'))
           .map((link) => canonicalize(link.href))
       );
 
@@ -50,47 +68,52 @@
 
         const source = escapeHtml(article.source || "Source RSS");
         const title = escapeHtml(article.title || "Article de veille");
-        const summary = escapeHtml(article.summary || "Résumé non fourni par la source. Ouvrez l'article pour en savoir plus.");
+        const summary = escapeHtml(
+          article.summary || "Résumé non fourni par la source."
+        );
         const url = escapeHtml(article.url || "#");
         const image = String(article.image || "").trim();
+
         const imageZone = /^https?:\/\//i.test(image)
-          ? `<div class="card-img-zone"><img src="${escapeHtml(image)}" alt="Illustration : ${title}" loading="lazy"></div>`
+          ? `<div class="card-img-zone">
+               <img src="${escapeHtml(image)}"
+                    alt="Illustration : ${title}"
+                    loading="lazy">
+             </div>`
           : "";
 
         item.innerHTML = `
           <div class="timeline-meta">
             <span class="axis-tag tag-tech">Nouvel article</span>
-            <span class="source-text"><i class="fa-solid fa-newspaper"></i> ${source}</span>
+            <span class="source-text">
+              <i class="fa-solid fa-newspaper"></i> ${source}
+            </span>
           </div>
           <div class="timeline-card">
             <div class="card-split">
               <div class="card-content">
                 <h3>${title}</h3>
                 <p class="summary-text">${summary}</p>
-                <a href="${url}" target="_blank" rel="noopener noreferrer" class="source-link-btn">Ouvrir l'article d'origine <i class="fa-solid fa-external-link"></i></a>
+                <a href="${url}" target="_blank"
+                   rel="noopener noreferrer"
+                   class="source-link-btn">
+                  Ouvrir l'article d'origine
+                  <i class="fa-solid fa-external-link"></i>
+                </a>
               </div>
               ${imageZone}
             </div>
           </div>`;
-        feed.prepend(item);
+
+        container.appendChild(item);
 
         const img = item.querySelector(".card-img-zone img");
-        if (img) img.addEventListener("error", () => img.closest(".card-img-zone")?.remove(), { once: true });
+        if (img) {
+          img.addEventListener("error", () => {
+            img.closest(".card-img-zone")?.remove();
+          }, { once: true });
+        }
       });
     })
     .catch((error) => console.warn("[Veille RSS]", error));
-
-  function canonicalize(value) {
-    try {
-      const url = new URL(value, window.location.href);
-      url.hash = "";
-      ["fbclid", "gclid"].forEach((key) => url.searchParams.delete(key));
-      Array.from(url.searchParams.keys()).filter((key) => key.toLowerCase().startsWith("utm_"))
-        .forEach((key) => url.searchParams.delete(key));
-      url.pathname = url.pathname.replace(/\/+$/, "") || "/";
-      return url.href;
-    } catch {
-      return "";
-    }
-  }
 })();
