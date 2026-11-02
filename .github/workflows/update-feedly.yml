@@ -2,10 +2,10 @@ name: Mettre à jour les articles de veille
 
 on:
   schedule:
-    # Le 5 de chaque mois à 07:00 UTC (l'heure locale varie avec l'heure d'été).
-    - cron: "0 7 5 * *"
+    # Le 1er de chaque mois à 07:00 UTC.
+    - cron: "0 7 1 * *"
   workflow_dispatch:
-
+  
 permissions:
   contents: write
 
