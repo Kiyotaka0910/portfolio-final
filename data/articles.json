@@ -1,6 +1,24 @@
 {
   "ia": [
     {
+      "id": "3941364f60fd1d24",
+      "title": "Benoit Carré, compositeur : « L’IA génératrice de musique est, à l’évidence, bien meilleure que moi »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/02/benoit-carre-compositeur-l-ia-generatrice-de-musique-est-a-l-evidence-bien-meilleure-que-moi_6805237_3232.html",
+      "source": "Le Monde — Intelligence artificielle",
+      "published": "2026-11-02T11:00:02+00:00",
+      "summary": "L’artiste, ancien membre du groupe Lilicub, connu pour son titre « Voyage en Italie », explore la création avec des prototypes d’intelligence artificielle et considère, dans une tribune au « Monde », que la pop peut se réinventer avec ces technologies virtuoses, à condition d’en rester maître.",
+      "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/5f6ad1d_upload-1-ryifecdlpm8k-frame-1069.jpg"
+    },
+    {
+      "id": "fd9de31a4aead142",
+      "title": "La justice coréenne plaide pour une amende contre les faux arrêts de l'IA",
+      "url": "https://www.actuia.com/actualite/la-justice-coreenne-plaide-pour-une-amende-contre-les-faux-arrets-de-lia",
+      "source": "ActuIA",
+      "published": "2026-11-02T10:30:26+00:00",
+      "summary": "Une enquête de l'administration judiciaire sud-coréenne révèle qu'environ 80 % des juges civils, familiaux et administratifs ayant répondu ont reçu des écritures citant des décisions fausses ou inexistantes, attribuées à l'IA. L'institution plaide pour une base légale, notamment une amende, dans les codes de procédure, sans préciser de montant ni de calendrier.",
+      "image": "https://www.actuia.com/storage/uploads/generated/11541-9ytyiesw-1200.jpg"
+    },
+    {
       "id": "336b0fb522d2d9cf",
       "title": "Microsoft : un groupe aligné sur Pékin a détourné des applications ConnectWise avec des agents d'IA",
       "url": "https://www.actuia.com/actualite/microsoft-un-groupe-aligne-sur-pekin-a-detourne-des-applications-connectwise-avec-des-agents-dia",
