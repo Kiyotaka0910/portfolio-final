@@ -1,3 +1,4 @@
+
 {
   "ia": [
     {
@@ -18,17 +19,13 @@
     }
   ],
   "cybersecurite": [
-  {
-    "name": "CERT-FR",
-    "url": "https://cert.cyber.gouv.fr/actualite/feed/"
-  },
-  {
-    "name": "Cybermalveillance.gouv.fr",
-    "url": "https://www.cybermalveillance.gouv.fr/feed/atom-flux-actualites"
-  }
-]
+    {
       "name": "CERT-FR",
-      "url": "https://www.cert.ssi.gouv.fr/site/cert-fr.rss"
+      "url": "https://cert.cyber.gouv.fr/actualite/feed/"
+    },
+    {
+      "name": "Cybermalveillance.gouv.fr",
+      "url": "https://www.cybermalveillance.gouv.fr/feed/atom-flux-actualites"
     }
   ]
 }
